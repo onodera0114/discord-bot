@@ -1,6 +1,5 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
-
-const agentsData = require('../agents.json');
+import { SlashCommandBuilder } from "discord.js";
+import agentsData from "../agent.json";
 
 module.exports = {
     data: new SlashCommandBuilder()

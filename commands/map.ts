@@ -1,4 +1,4 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
+import { SlashCommandBuilder } from "discord.js";
 
 const mapList = ['FRACTURE', 'BREEZE', 'ICEBOX', 'BIND', 'HAVEN', 'SPLIT', 'ASCENT', 'PEARL', 'LOTUS', 'SUNSET', 'ABYSS'];
 

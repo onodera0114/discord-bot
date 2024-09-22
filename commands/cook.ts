@@ -1,5 +1,5 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
-const cookData = require('../cook.json');
+import { SlashCommandBuilder } from "discord.js";
+import cookData from "../cook.json";
 
 module.exports = {
     data: new SlashCommandBuilder()

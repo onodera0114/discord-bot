@@ -1,5 +1,5 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
-const agentsData = require('../agents.json');
+import { SlashCommandBuilder } from "discord.js";
+import agentsData from "../agent.json";
 
 const createAgentList = (interaction) => {
   return agentsData.agentsList.map(value => value.name)

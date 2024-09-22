@@ -1,4 +1,4 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
+import { SlashCommandBuilder } from "discord.js";
 
 const roleList = ['duelist', 'controller', 'initiator', 'sentinel'];
 
