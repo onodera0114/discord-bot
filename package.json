@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "node index.ts"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "discord.js": "^14.13.0"
+  }
+}
