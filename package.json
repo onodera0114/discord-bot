@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "start": "node --env-file=.env.local index.js",
-    "start:prd": "node --env-file=.env index.js"
+    "start:prd": "node index.js"
   },
   "dependencies": {
     "dayjs": "^1.11.13",
