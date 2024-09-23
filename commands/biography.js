@@ -1,5 +1,6 @@
-import { SlashCommandBuilder } from "discord.js";
-import agentsData from "../agent.json";
+const { SlashCommandBuilder } = require('@discordjs/builders');
+const fs = require('fs');
+const agentsData = JSON.parse(fs.readFileSync("./agent.json"));
 
 const createAgentList = (interaction) => {
   return agentsData.agentsList.map(value => value.name)

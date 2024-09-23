@@ -1,4 +1,5 @@
-import { SlashCommandBuilder, ChannelType } from "discord.js";
+const { SlashCommandBuilder } = require('@discordjs/builders');
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('user_id')

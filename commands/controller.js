@@ -1,5 +1,6 @@
-import { SlashCommandBuilder } from "discord.js";
-import agentsData from "../agent.json";
+const { SlashCommandBuilder } = require('@discordjs/builders');
+const fs = require('fs');
+const agentsData = JSON.parse(fs.readFileSync("./agent.json"));
 
 module.exports = {
     data: new SlashCommandBuilder()

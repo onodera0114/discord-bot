@@ -1,5 +1,6 @@
-import { SlashCommandBuilder, ChannelType } from "discord.js";
-import agentsData from "../agent.json";
+const { SlashCommandBuilder  } = require('@discordjs/builders');
+const { ChannelType } = require('discord.js');
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('move')

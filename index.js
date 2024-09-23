@@ -1,7 +1,17 @@
-import fs from "fs";
-import { Client, Events, ChannelType, PermissionsBitField, GatewayIntentBits } from "discord.js";
+const fs = require('fs');
+const { 
+  Client,
+  Events,
+  GatewayIntentBits: {
+    Guilds,
+    GuildMessages,
+    GuildVoiceStates
+  },
+  ChannelType,
+  PermissionsBitField
+} = require('discord.js');
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildVoiceStates]});
+const client = new Client({ intents: [Guilds, GuildMessages, GuildVoiceStates]});
 
 const commands = {};
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -17,7 +27,7 @@ client.once(Events.ClientReady, async () => {
   for (const commandName in commands) {
       data.push(commands[commandName].data)
   }
-  await client.application.commands.set(data, "893877215656300635");
+  await client.application.commands.set(data, process.env.MAINSERVERID);
   console.log("ready");
 });
 
