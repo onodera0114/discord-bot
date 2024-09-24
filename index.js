@@ -165,3 +165,5 @@ client.on(Events.VoiceStateUpdate, (oldGuildMember, newGuildMember) =>{
 // }
 
 client.login(process.env.DISCORD_BOT_TOKEN);
+
+const port = process.env.PORT || 4000;
