@@ -10,6 +10,7 @@ const {
   ChannelType,
   PermissionsBitField
 } = require('discord.js');
+const keepAlive = require("./keepAlive");
 
 const client = new Client({ intents: [Guilds, GuildMessages, GuildVoiceStates]});
 
@@ -22,7 +23,7 @@ for (const file of commandFiles) {
 }
 
 client.once(Events.ClientReady, async () => {
-  client.user.setActivity('VYSE追加', { type: 4 })
+  client.user.setActivity('BOT復旧中', { type: 4 })
   const data = [];
   for (const commandName in commands) {
       data.push(commands[commandName].data)
@@ -165,5 +166,3 @@ client.on(Events.VoiceStateUpdate, (oldGuildMember, newGuildMember) =>{
 // }
 
 client.login(process.env.DISCORD_BOT_TOKEN);
-
-const port = process.env.PORT || 4000;
