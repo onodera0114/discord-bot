@@ -1,3 +1,4 @@
+const { MessageFlags } = require('discord.js');
 const { SlashCommandBuilder  } = require('@discordjs/builders');
 
 module.exports = {
@@ -6,6 +7,6 @@ module.exports = {
         .setDescription('testコマンド'),
     async execute(interaction) {
       const jstNow = new Date(Date.now() + ((new Date().getTimezoneOffset() + (9 * 60)) * 60 * 1000));
-      await interaction.reply({ content: `${jstNow.getHours()}`, ephemeral: true });
+      await interaction.reply({ content: `${jstNow.getHours()}`, flags: MessageFlags.Ephemeral });
     },
 };

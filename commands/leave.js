@@ -1,3 +1,4 @@
+const { MessageFlags } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
@@ -19,18 +20,18 @@ module.exports = {
         if(member.voice.channel.members.find(member => member.user.id === interaction.options.get('user').user.id)){
           if(interaction.options.get('user').user.id === interaction.options.get('user_id').value){
             interaction.options.get('user').member.voice.setChannel(null);
-            await interaction.reply({ content: `ユーザーをVCから切断しました。`, ephemeral: true });
+            await interaction.reply({ content: `ユーザーをVCから切断しました。`, flags: MessageFlags.Ephemeral });
           }
           else{
-            await interaction.reply({ content: `ユーザーIDに誤りがあります。`, ephemeral: true });
+            await interaction.reply({ content: `ユーザーIDに誤りがあります。`, flags: MessageFlags.Ephemeral });
           }
         }
         else{
-          await interaction.reply({ content: `選択されたユーザーが同じVCにいません。`, ephemeral: true });
+          await interaction.reply({ content: `選択されたユーザーが同じVCにいません。`, flags: MessageFlags.Ephemeral });
         }
       }
       else{
-        await interaction.reply({ content: `VCにお入りください`, ephemeral: true });
+        await interaction.reply({ content: `VCにお入りください`, flags: MessageFlags.Ephemeral });
       }
     },
 };

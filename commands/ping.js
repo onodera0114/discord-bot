@@ -1,3 +1,4 @@
+const { MessageFlags } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
@@ -5,8 +6,8 @@ module.exports = {
         .setName('ping')
         .setDescription('pingを表示'),
     async execute(interaction) {
-      await interaction.reply({ content: `WebSocket Ping: ${interaction.client.ws.ping}ms\nAPI Endpoint Ping: ...`, ephemeral: true });
-		  let msg = await interaction.fetchReply();
-		  await interaction.editReply(`WebSocket Ping: ${interaction.client.ws.ping}ms\nAPI Endpoint Ping: ${msg.createdTimestamp - interaction.createdTimestamp}ms`);
+        await interaction.reply({ content: `WebSocket Ping: ${interaction.client.ws.ping}ms\nAPI Endpoint Ping: ...`, flags: MessageFlags.Ephemeral });
+		let msg = await interaction.fetchReply();
+		await interaction.editReply(`WebSocket Ping: ${interaction.client.ws.ping}ms\nAPI Endpoint Ping: ${msg.createdTimestamp - interaction.createdTimestamp}ms`);
     },
 };

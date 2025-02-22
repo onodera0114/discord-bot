@@ -1,3 +1,4 @@
+const { MessageFlags } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
@@ -9,11 +10,11 @@ module.exports = {
             .setDescription('ユーザーを選択')),
     async execute(interaction) {
       if(interaction.options.get('user')){
-        await interaction.reply({ content: `${interaction.options.get('user').user.username}： ${interaction.options.get('user').user.id}`, ephemeral: true });
+        await interaction.reply({ content: `${interaction.options.get('user').user.username}： ${interaction.options.get('user').user.id}`, flags: MessageFlags.Ephemeral });
         setTimeout(() => interaction.deleteReply(), 60000);
       }
       else{
-        await interaction.reply({ content: `${interaction.user.username}： ${interaction.user.id}`, ephemeral: true });
+        await interaction.reply({ content: `${interaction.user.username}： ${interaction.user.id}`, flags: MessageFlags.Ephemeral });
       }
     },
 };

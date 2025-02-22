@@ -1,3 +1,4 @@
+const { MessageFlags } = require('discord.js');
 const { SlashCommandBuilder  } = require('@discordjs/builders');
 
 module.exports = {
@@ -9,10 +10,10 @@ module.exports = {
             .setDescription('ユーザーを選択')),
     async execute(interaction) {
       if(interaction.options.get('user')){
-        await interaction.reply({ content: `username: ${interaction.options.get('user').user.username}\nglobalName: ${interaction.options.get('user').user.globalName}`, ephemeral: true });
+        await interaction.reply({ content: `username: ${interaction.options.get('user').user.username}\nglobalName: ${interaction.options.get('user').user.globalName}`, flags: MessageFlags.Ephemeral });
       }
       else{
-        await interaction.reply({ content: `username: ${interaction.user.username}\nglobalName: ${interaction.user.globalName}`, ephemeral: true });
+        await interaction.reply({ content: `username: ${interaction.user.username}\nglobalName: ${interaction.user.globalName}`, flags: MessageFlags.Ephemeral });
       }
     },
 };

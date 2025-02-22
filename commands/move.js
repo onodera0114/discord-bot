@@ -1,5 +1,5 @@
 const { SlashCommandBuilder  } = require('@discordjs/builders');
-const { ChannelType } = require('discord.js');
+const { ChannelType, MessageFlags } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -20,16 +20,16 @@ module.exports = {
       // if(member.voice.channel){
       //   if(member.voice.channel.members.find(member => member.user.id === interaction.options.get('user').user.id)){
       //     interaction.options.get('user').member.voice.setChannel(interaction.options.get('vc').value);
-      //     await interaction.reply({ content: `ユーザーを移動させました。`, ephemeral: true });
+      //     await interaction.reply({ content: `ユーザーを移動させました。`, flags: MessageFlags.Ephemeral });
       //   }
       //   else{
-      //     await interaction.reply({ content: `選択されたユーザーが同じVCにいません。`, ephemeral: true });
+      //     await interaction.reply({ content: `選択されたユーザーが同じVCにいません。`, flags: MessageFlags.Ephemeral });
       //   }
       // }
       // else{
-      //   await interaction.reply({ content: `VCにお入りください`, ephemeral: true });
+      //   await interaction.reply({ content: `VCにお入りください`, flags: MessageFlags.Ephemeral });
       // }
       interaction.options.get('user').member.voice.setChannel(interaction.options.get('vc').value);
-          await interaction.reply({ content: `ユーザーを移動させました。`, ephemeral: true });
+          await interaction.reply({ content: `ユーザーを移動させました。`, flags: MessageFlags.Ephemeral });
     },
 };

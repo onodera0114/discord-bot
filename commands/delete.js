@@ -1,3 +1,4 @@
+const { MessageFlags } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
@@ -9,6 +10,6 @@ module.exports = {
       // if(ch){
       //   ch.delete();
       // }
-      await interaction.reply({ content: `削除`, ephemeral: true });
+      await interaction.reply({ content: `削除`, flags: MessageFlags.Ephemeral });
     },
 };

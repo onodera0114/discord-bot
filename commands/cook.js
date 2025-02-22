@@ -1,3 +1,4 @@
+const { MessageFlags } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const cookData = require('../cook.json');
 
@@ -8,6 +9,6 @@ module.exports = {
     async execute(interaction) {
       const cookingName = cookData.cook.map(cook => cook.name)
       // await interaction.reply(cookingName[Math.floor(Math.random() * cookingName.length)]);
-      await interaction.reply({ content: `${cookingName[Math.floor(Math.random() * cookingName.length)]}`, ephemeral: true });
+      await interaction.reply({ content: `${cookingName[Math.floor(Math.random() * cookingName.length)]}`, flags: MessageFlags.Ephemeral });
     },
 };
