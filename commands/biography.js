@@ -23,7 +23,7 @@ module.exports = {
         choices = createAgentList(interaction);
       }
       
-      const filtered = choices.filter(choice => choice.startsWith(focusedOption.value));
+      const filtered = choices.filter(choice => choice.startsWith(focusedOption.value)).slice(0, 25);
       await interaction.respond(
         filtered.map(choice => ({ name: choice, value: choice })),
       );
