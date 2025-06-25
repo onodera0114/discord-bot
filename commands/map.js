@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
-const mapList = ['FRACTURE', 'BREEZE', 'ICEBOX', 'BIND', 'HAVEN', 'SPLIT', 'ASCENT', 'PEARL', 'LOTUS', 'SUNSET', 'ABYSS'];
+const mapList = ['FRACTURE', 'BREEZE', 'ICEBOX', 'BIND', 'HAVEN', 'SPLIT', 'ASCENT', 'PEARL', 'LOTUS', 'SUNSET', 'ABYSS', 'CORRODE'];
 
 const createMapList = (interaction) => {
   const choseMapList = [];
