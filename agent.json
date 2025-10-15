@@ -917,6 +917,40 @@
         "stack": 2,
         "effect": ""
       }
+    },
+    {
+      "id": 28,
+      "name": "VETO",
+      "role": "SENTINEL",
+      "biography": "セネガル出身のヴィトーは制御不能なDNA変異によって力を得た武闘派の精鋭だ。敵のパワーとテクノロジーを無効化し、戦いのルールを塗り替える。戦場にヴィトーがいるなら、確実なのは銃撃だけだ。",
+      "ability1": {
+        "name": "",
+        "description": "",
+        "cost": 200,
+        "stack": 2,
+        "effect": ""
+      },
+      "ability2": {
+        "name": "",
+        "description": "",
+        "cost": 200,
+        "stack": 2,
+        "effect": ""
+      },
+      "signature": {
+        "name": "",
+        "description": "",
+        "cost": 200,
+        "stack": 2,
+        "effect": ""
+      },
+      "ultimate": {
+        "name": "",
+        "description": "",
+        "cost": 200,
+        "stack": 2,
+        "effect": ""
+      }
     }
   ]
 }
