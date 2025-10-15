@@ -24,7 +24,7 @@ for (const file of commandFiles) {
 }
 
 client.once(Events.ClientReady, async () => {
-  client.user.setActivity('昼飯乃流儀', { type: 4 })
+  client.user.setActivity('領域展開 昼飯乃流儀', { type: 4 })
   const data = [];
   for (const commandName in commands) {
       data.push(commands[commandName].data)
